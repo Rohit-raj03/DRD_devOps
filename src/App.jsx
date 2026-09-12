@@ -53,7 +53,7 @@ const packages = [
   },
   {
     name: "Advanced App",
-    price: "₹40,000–₹70,000+",
+    price: "₹40,000–₹100,000+",
     note: "Custom workflows for serious operations.",
     features: [
       "Custom frontend + backend API",
@@ -119,6 +119,17 @@ function App() {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const packageName = formData.get("package");
+    const message = formData.get("message");
+    const subject = `New project enquiry from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\nPackage: ${packageName}\n\nProject details:\n${message}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@drdstudies.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = gmailUrl;
     setSubmitted(true);
   };
 
@@ -504,10 +515,10 @@ function App() {
             </p>
             <div className="contact-details">
               <a href="tel:+917003508338">
-                <Phone size={16} /> ++91 70035 08338
+                <Phone size={16} /> +91 70035 08338
               </a>
-              <a href="mailto:hello@drddevops.in">
-                <Send size={16} /> hello@drddevops.in
+              <a href="mailto:info@drdstudies.com">
+                <Send size={16} /> info@drdstudies.com
               </a>
             </div>
           </div>
@@ -533,12 +544,26 @@ function App() {
               <>
                 <label>
                   Your name
-                  <input required type="text" placeholder="Rahul Gupta" />
+                  <input
+                    required
+                    name="name"
+                    type="text"
+                    placeholder="Rahul Gupta"
+                  />
+                </label>
+                <label>
+                  Email address
+                  <input
+                    required
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                  />
                 </label>
                 <label>
                   What are you building?
-                  <select defaultValue="">
-                    <option value="" disabled>
+                  <select name="package" defaultValue="">
+                    <option value="" disabled selected>
                       Select a package
                     </option>
                     <option>Starter Website</option>
@@ -551,6 +576,7 @@ function App() {
                   Tell us a little more
                   <textarea
                     required
+                    name="message"
                     rows="3"
                     placeholder="A few words about your business and what you need..."
                   />

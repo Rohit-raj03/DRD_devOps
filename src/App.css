@@ -50,8 +50,8 @@
   background: var(--blue);
 }
 .brand-logo {
-  width: 46px;
-  height: 46px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   object-position: 50% 32%;
   border-radius: 7px;
@@ -219,7 +219,7 @@ h2 em {
   border: 1px solid #dce9f0;
   box-shadow: 0 28px 45px rgba(23, 87, 121, 0.14);
   border-radius: 6px;
-  transform: rotate(-7deg);
+  transform: rotate(-7deg) scale(1.15);
   position: relative;
   z-index: 1;
   overflow: hidden;
