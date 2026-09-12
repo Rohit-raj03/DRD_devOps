@@ -1,15 +1,21 @@
 import { useState } from "react";
 import {
   ArrowUpRight,
+  BarChart3,
+  Braces,
   Check,
+  CheckCircle2,
   ChevronDown,
   Code2,
+  Cloud,
+  Database,
   Globe2,
   Layers3,
   Menu,
   MessageCircle,
   Phone,
   Search,
+  Server,
   Send,
   Sparkles,
   X,
@@ -173,85 +179,185 @@ function App() {
       <main id="top">
         <section className="hero-section">
           <div className="hero-copy">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" /> Websites that work as hard as you
-              do
+            <div className="hero-badge">
+              <span className="hero-badge-star">✦</span> DIGITAL SOLUTIONS FOR
+              MODERN BUSINESSES
             </div>
             <h1>
-              Turn your business
+              We Build{" "}
+              <span className="hero-gradient-text">Digital Solutions</span>
               <br />
-              <em>into a destination.</em>
+              That Move Your Business Forward.
             </h1>
             <p className="hero-lede">
-              We design fast, thoughtful digital experiences for the businesses
-              shaping their local communities and beyond.
+              From business websites to custom web applications, we design and
+              develop fast, modern digital experiences that help businesses
+              attract customers and grow online.
             </p>
             <div className="hero-actions">
               <a
                 className="button button-primary transition-transform duration-200 hover:-translate-y-0.5"
-                href="#pricing"
+                href="#contact"
               >
-                Explore packages <ArrowUpRight size={17} />
+                Start Your Project <ArrowUpRight size={17} />
               </a>
-              <a className="text-link" href="#contact">
-                <MessageCircle size={17} /> Talk to our team
+              <a className="hero-secondary-button" href="#work">
+                Explore Our Work <ArrowUpRight size={16} />
               </a>
             </div>
             <div className="hero-proof">
               <span>
-                <Check size={15} /> Clear pricing
+                <Check size={15} /> Modern Technology
               </span>
               <span>
-                <Check size={15} /> Local support
+                <Check size={15} /> Responsive Design
               </span>
               <span>
-                <Check size={15} /> Built to grow
+                <Check size={15} /> Business Focused
               </span>
             </div>
           </div>
           <div
             className="hero-art"
-            aria-label="Abstract illustration of a website dashboard"
+            aria-label="Abstract technology workflow showing idea to deployment"
           >
-            <div className="art-orbit orbit-one" />
-            <div className="art-orbit orbit-two" />
+            <div className="hero-grid-pattern" />
+            <div className="hero-glow hero-glow-blue" />
+            <div className="hero-glow hero-glow-sky" />
+            <div className="hero-orbit hero-orbit-one" />
+            <div className="hero-orbit hero-orbit-two" />
+            <div className="hero-connector connector-one" />
+            <div className="hero-connector connector-two" />
+            <div className="hero-connector connector-three" />
             <div className="dashboard-card">
-              <div className="dash-top">
-                <span className="mini-logo">
-                  <Code2 size={12} />
-                </span>
-                <span className="dash-line short" />
-                <span className="dash-menu">•••</span>
-              </div>
-              <div className="dash-body">
-                <div className="dash-heading" />
-                <div className="dash-heading small" />
-                <div className="dash-row">
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <div className="dash-chart">
-                  <span />
-                  <span />
-                  <span />
+              <div className="dashboard-window-top">
+                <div className="window-dots">
                   <span />
                   <span />
                   <span />
                 </div>
+                <div className="window-address">
+                  <Globe2 size={10} /> drddevops / dashboard
+                </div>
+                <span className="window-menu">•••</span>
+              </div>
+              <div className="dashboard-body">
+                <div className="dashboard-sidebar">
+                  <span className="sidebar-logo">
+                    <Code2 size={12} />
+                  </span>
+                  <span className="sidebar-item active" />
+                  <span className="sidebar-item" />
+                  <span className="sidebar-item" />
+                  <span className="sidebar-item" />
+                </div>
+                <div className="dashboard-content">
+                  <div className="dashboard-title-row">
+                    <div>
+                      <span className="dashboard-eyebrow">OVERVIEW</span>
+                      <strong>Project performance</strong>
+                    </div>
+                    <span className="dashboard-period">This month⌄</span>
+                  </div>
+                  <div className="dashboard-metrics">
+                    <span>
+                      <b>84.6%</b>
+                      <small>Growth rate</small>
+                    </span>
+                    <span>
+                      <b>12.8k</b>
+                      <small>Active users</small>
+                    </span>
+                    <span>
+                      <b>+24.8%</b>
+                      <small>Conversion</small>
+                    </span>
+                  </div>
+                  <div className="dashboard-chart">
+                    <div className="chart-bars">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                    <div className="chart-line" />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="float-label label-a">
-              <Globe2 size={16} />
-              <span>Reach further</span>
+            <div className="tech-node node-development">
+              <span className="node-icon">
+                <Braces size={16} />
+              </span>
+              <span>
+                <b>Development</b>
+                <small>&lt;/&gt; clean code</small>
+              </span>
             </div>
-            <div className="float-label label-b">
-              <Sparkles size={15} />
-              <span>Make an impression</span>
+            <div className="tech-node node-cloud">
+              <span className="node-icon">
+                <Cloud size={16} />
+              </span>
+              <span>
+                <b>Cloud deploy</b>
+                <small>always available</small>
+              </span>
             </div>
-            <div className="float-label label-c">
-              <Search size={15} />
-              <span>SEO ready</span>
+            <div className="tech-node node-api">
+              <span className="node-icon">
+                <Server size={16} />
+              </span>
+              <span>
+                <b>API</b>
+                <small>connected systems</small>
+              </span>
+            </div>
+            <div className="tech-node node-database">
+              <span className="node-icon">
+                <Database size={16} />
+              </span>
+              <span>
+                <b>Database</b>
+                <small>secure data</small>
+              </span>
+            </div>
+            <div className="tech-node node-analytics">
+              <span className="node-icon">
+                <BarChart3 size={16} />
+              </span>
+              <span>
+                <b>Analytics</b>
+                <small>measurable growth</small>
+              </span>
+            </div>
+            <div className="deploy-status">
+              <CheckCircle2 size={17} />
+              <span>
+                <b>Successfully deployed</b>
+                <small>your next digital advantage</small>
+              </span>
+            </div>
+            <div className="hero-flow-label">
+              <span>IDEA</span>
+              <i /> <span>DESIGN</span>
+              <i /> <span>DEVELOP</span>
+              <i /> <span>DEPLOY</span>
+              <i /> <span>GROW</span>
+            </div>
+          </div>
+          <div className="hero-trust-strip">
+            <span>Trusted Digital Solutions for Growing Businesses</span>
+            <div>
+              <b>Web Development</b>
+              <i />
+              <b>E-commerce</b>
+              <i />
+              <b>Web Applications</b>
+              <i />
+              <b>Custom Software</b>
             </div>
           </div>
         </section>
